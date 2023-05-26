@@ -5,6 +5,8 @@ async function CEPSearch(cep) {
     if (convertedCEP.erro) {
       throw Error("Que vacilo! Você preencheu um CEP que não existe!");
     }
+    const city = document.getElementById("cidade");
+    const address = document.getElementById("endereco");
     console.log(convertedCEP);
     return convertedCEP;
   } catch (erro) {
