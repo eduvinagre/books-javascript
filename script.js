@@ -7,6 +7,14 @@ async function CEPSearch(cep) {
     }
     const city = document.getElementById("cidade");
     const address = document.getElementById("endereco");
+    const state = document.getElementById("estado");
+    const neighborhood = document.getElementById("bairro");
+
+    city.value = convertedCEP.localidade;
+    address.value = convertedCEP.logradouro;
+    state.value = convertedCEP.uf;
+    neighborhood.value = convertedCEP.bairro;
+
     console.log(convertedCEP);
     return convertedCEP;
   } catch (erro) {
